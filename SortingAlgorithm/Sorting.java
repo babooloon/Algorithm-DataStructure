@@ -3,5 +3,6 @@
  * Email: nickyangcchs@hotmail.com
  * Project: SortingAlgorithm
  */
-public class QuickSort {
+public interface Sorting {
+    void sort(int[] a, int start, int end);
 }
