@@ -1,4 +1,3 @@
-package SortingAlgorithm;
 
 /**
  * Created by babooloon on 2017/7/11.
