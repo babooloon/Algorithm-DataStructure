@@ -7,6 +7,21 @@ public class PriorityQueue {
     private int[] a = new int[10];
     private int size = 0;
 
+    public int size() {
+        return this.size;
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        for (int i = 0; i < this.size; i++) {
+            if (i != this.size - 1)
+                sb.append(this.a[i]).append(", ");
+            else
+                sb.append(this.a[i]);
+        }
+        return sb.toString();
+    }
     public int heapMax() {
         return a[0];
     }
@@ -20,7 +35,7 @@ public class PriorityQueue {
         return max;
     }
 
-    public void heapIncreaseKey(int i, int key) {
+    private void heapIncreaseKey(int i, int key) {
         if (key < a[i]) {
             System.err.println("new key is smaller than current key.");
         }
