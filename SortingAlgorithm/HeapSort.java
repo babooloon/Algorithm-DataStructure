@@ -4,18 +4,6 @@
  * Project: SortingAlgorithm
  */
 public class HeapSort implements Sorting {
-    public static void main(String args[]) {
-        int[] a = {-20, 3, 0, -3, 1, 2, 5, 20, 12, 14};
-        heapSort(a, 0, 8);
-        for (int i = 0; i < a.length; i++) {
-            if (i < a.length - 1) {
-                System.out.print(a[i] + ", ");
-            } else {
-                System.out.println(a[i]);
-            }
-        }
-    }
-
     private static void maxHeapify(int[] a, int i, int end) {
         int l = (i << 1) + 1;
         int r = l + 1;
@@ -63,13 +51,6 @@ public class HeapSort implements Sorting {
 
     private static void heapSort(int[] a, int start, int end) {
         buildMaxHeap(a, start, end);
-        for (int i = 0; i < a.length; i++) {
-            if (i < a.length - 1) {
-                System.out.print(a[i] + ", ");
-            } else {
-                System.out.println(a[i]);
-            }
-        }
         for (int i = end; i > start; i--) {
             int temp = a[i];
             a[i] = a[start];
